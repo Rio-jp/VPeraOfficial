@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/context/LanguageContext';
+import { getAssetPath } from '@/utils/basePath';
 
 import Image from 'next/image';
 
@@ -34,7 +35,7 @@ export default function Screenshots() {
                     >
                         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity z-10" />
                         <Image
-                            src="/screenshot1.png"
+                            src={getAssetPath('/screenshot1.png')}
                             alt={t('screenshots.main')}
                             fill
                             className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
@@ -50,7 +51,7 @@ export default function Screenshots() {
                     >
                         <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-600/10 opacity-0 group-hover:opacity-100 transition-opacity z-10" />
                         <Image
-                            src="/screenshot2.png"
+                            src={getAssetPath('/screenshot2.png')}
                             alt={t('screenshots.settings')}
                             fill
                             className="object-cover object-top transition-transform duration-500 group-hover:scale-105"

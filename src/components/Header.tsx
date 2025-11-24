@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/context/LanguageContext';
+import { getAssetPath } from '@/utils/basePath';
 
 export default function Header() {
     const { language, setLanguage, t } = useLanguage();
@@ -18,7 +19,7 @@ export default function Header() {
             <div className="flex items-center gap-2">
                 <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
                     <Image
-                        src="/icon.png"
+                        src={getAssetPath('/icon.png')}
                         alt="V-Pera Logo"
                         width={32}
                         height={32}
@@ -41,7 +42,7 @@ export default function Header() {
                     {language === 'ja' ? 'English' : '日本語'}
                 </button>
                 <Link
-                    href="https://github.com/Rio-jp/VPera/releases/latest"
+                    href="https://rio-sw.booth.pm/items/7685441"
                     target="_blank"
                     className="hidden md:block px-5 py-2 bg-white text-black font-bold rounded-full hover:bg-gray-200 transition-colors"
                 >

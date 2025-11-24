@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { useLanguage } from '@/context/LanguageContext';
 import TranslationTypewriter from './TranslationTypewriter';
 import { translations } from '@/data/translations';
+import { getAssetPath } from '@/utils/basePath';
 
 function ParticleBackground() {
     // Generate random particles
@@ -145,7 +146,7 @@ export default function Hero() {
             <div className="absolute inset-0 z-0">
                 <motion.div style={{ y: y1 }} className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-[128px] animate-pulse" />
                 <motion.div style={{ y: y2 }} className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-[128px] animate-pulse delay-1000" />
-                <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-20" />
+                <div className="absolute inset-0 opacity-20" style={{ backgroundImage: `url('${getAssetPath('/grid.svg')}')` }} />
                 <ParticleBackground />
             </div>
 
@@ -190,7 +191,7 @@ export default function Hero() {
 
                 <motion.div variants={buttonContainerVariants} className="flex flex-col md:flex-row items-center justify-center gap-4">
                     <Link
-                        href="https://github.com/Rio-jp/VPera/releases/latest"
+                        href="https://rio-sw.booth.pm/items/7685441"
                         target="_blank"
                         className="group relative px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-gray-200 transition-all flex items-center gap-2 shadow-lg hover:shadow-cyan-500/20 hover:scale-105 active:scale-95"
                     >
