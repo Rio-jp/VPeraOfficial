@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "V-Pera | Real-time Translation for VRChat",
   description: "Break language barriers in Virtual Reality with V-Pera. Real-time speech-to-text and translation powered by Groq.",
   icons: {
-    icon: '/icon.png',
+    icon: process.env.NODE_ENV === 'production' ? '/VPeraOfficial/icon.png' : '/icon.png',
   },
 };
 
