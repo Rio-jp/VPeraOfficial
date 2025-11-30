@@ -32,6 +32,7 @@ export default function Header() {
             <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
                 <Link href="/#features" className="hover:text-white transition-colors">{t('header.features')}</Link>
                 <Link href="/#screenshots" className="hover:text-white transition-colors">{t('header.screenshots')}</Link>
+                <Link href="/guide" className="hover:text-white transition-colors">{t('header.guide')}</Link>
             </nav>
 
             <div className="flex items-center gap-4">

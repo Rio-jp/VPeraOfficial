@@ -3,6 +3,7 @@ export const translations = {
         header: {
             features: "機能",
             screenshots: "スクリーンショット",
+            guide: "設定ガイド",
             download: "ダウンロード",
         },
         hero: {
@@ -126,8 +127,66 @@ export const translations = {
                 },
                 4: {
                     title: "4. 規約の変更",
-                    content: "開発者は、必要に応じて本規約を随時変更する権利を留保します。変更後の規約は、本ウェブサイトに掲載された時点で効力を生じるものとします。重要な変更がある場合は、適切な方法で通知するよう努めます。"
                 }
+            }
+        },
+        guide: {
+            title: "設定ガイド",
+            subtitle: "3ステップで始める、快適なVRChatライフ。",
+            step1: {
+                title: "1. Groq APIキーの取得",
+                desc: "V-Peraの爆速翻訳を実現するために、GroqのAPIキーが必要です。以下のリンクから無料で取得できます。",
+                button: "Groq Consoleへ",
+                note: "取得したキーは、V-Peraの「Settings」タブにある「Groq API Key」に入力してください。"
+            },
+            step2: {
+                title: "2. 音声設定",
+                desc: "使用するマイクと、翻訳対象のシステム音声を設定します。",
+                mic: "Microphone: あなたの声を入力するマイクデバイスを選択",
+                system: "System Audio: 相手の声（デスクトップ音声など）を出力するデバイスを選択"
+            },
+            step3: {
+                title: "3. 言語設定",
+                desc: "それぞれの音声に対する翻訳言語を設定します。",
+                myVoice: "My Voice (Microphone): 自分の声の言語（Source）と翻訳先言語（Target）を設定",
+                partner: "Partner (System Audio): 相手の声の言語（Source）と自分が読みたい言語（Target）を設定"
+            }
+        },
+        settingsReference: {
+            title: "設定項目一覧",
+            enableTranslation: {
+                title: "Enable Translation",
+                desc: "翻訳機能のON/OFFを切り替えます。OFFの場合、文字起こしのみが行われます。"
+            },
+            groqKey: {
+                title: "Groq API Key",
+                desc: "取得したGroqのAPIキーをここに貼り付けます。"
+            },
+            myVoice: {
+                title: "My Voice (Microphone)",
+                desc: "自分の声（マイク入力）の言語設定です。",
+                source: "Source: 話している言語を選択",
+                target: "Target: 翻訳したい言語を選択",
+                languages: "対応言語: 日本語、英語、中国語、韓国語、スペイン語、フランス語、ドイツ語"
+            },
+            partner: {
+                title: "Partner (System Audio)",
+                desc: "相手の声（システム音声）の言語設定です。",
+                source: "Source: 相手が話している言語を選択",
+                target: "Target: 自分が読みたい言語を選択"
+            },
+            osc: {
+                title: "OSC Output",
+                desc: "VRChatへのOSC送信設定です。",
+                params: "IP / PORT / OSC Address: 環境に合わせて設定可能（通常はデフォルトでOK）",
+                micTranscription: "Mic Transcription: マイクの文字起こし結果（原文）を送信するかどうか",
+                micTranslation: "Mic Translation: マイクの翻訳結果を送信するかどうか"
+            },
+            modelSize: {
+                title: "Model Size",
+                desc: "音声認識に使用するモデルを選択します。",
+                groq: "GroqCloud: サーバーで処理。精度・速度ともに最高品質。",
+                local: "その他: ローカルPCで処理。PCスペックに依存し、精度・速度はGroqに劣ります。"
             }
         }
     },
@@ -135,6 +194,7 @@ export const translations = {
         header: {
             features: "Features",
             screenshots: "Screenshots",
+            guide: "Setup Guide",
             download: "Download",
         },
         hero: {
@@ -260,6 +320,65 @@ export const translations = {
                     title: "4. Changes to Terms",
                     content: "The developer reserves the right to change these terms at any time as needed. The modified terms shall take effect when posted on this website. We will make efforts to notify you of significant changes in an appropriate manner."
                 }
+            }
+        },
+        guide: {
+            title: "Setup Guide",
+            subtitle: "Get started in 3 simple steps.",
+            step1: {
+                title: "1. Get Groq API Key",
+                desc: "To enable V-Pera's lightning-fast translation, you need a Groq API key. You can get it for free from the link below.",
+                button: "Go to Groq Console",
+                note: "Enter the obtained key into 'Groq API Key' in the 'Settings' tab of V-Pera."
+            },
+            step2: {
+                title: "2. Audio Settings",
+                desc: "Configure your microphone and system audio devices.",
+                mic: "Microphone: Select the device for your voice input",
+                system: "System Audio: Select the device for system audio output (e.g., desktop audio)"
+            },
+            step3: {
+                title: "3. Language Settings",
+                desc: "Configure translation languages for each audio source.",
+                myVoice: "My Voice (Microphone): Set your language (Source) and target language (Target)",
+                partner: "Partner (System Audio): Set their language (Source) and your reading language (Target)"
+            }
+        },
+        settingsReference: {
+            title: "Settings Reference",
+            enableTranslation: {
+                title: "Enable Translation",
+                desc: "Toggles translation ON/OFF. If OFF, only transcription is performed."
+            },
+            groqKey: {
+                title: "Groq API Key",
+                desc: "Paste your Groq API key here."
+            },
+            myVoice: {
+                title: "My Voice (Microphone)",
+                desc: "Language settings for your voice (microphone input).",
+                source: "Source: Select the language you are speaking",
+                target: "Target: Select the language you want to translate to",
+                languages: "Supported: Japanese, English, Chinese, Korean, Spanish, French, German"
+            },
+            partner: {
+                title: "Partner (System Audio)",
+                desc: "Language settings for others' voices (system audio).",
+                source: "Source: Select the language they are speaking",
+                target: "Target: Select the language you want to read"
+            },
+            osc: {
+                title: "OSC Output",
+                desc: "Settings for OSC transmission to VRChat.",
+                params: "IP / PORT / OSC Address: Configurable (Default is usually fine)",
+                micTranscription: "Mic Transcription: Send mic transcription (original text)",
+                micTranslation: "Mic Translation: Send mic translation result"
+            },
+            modelSize: {
+                title: "Model Size",
+                desc: "Select the model used for speech recognition.",
+                groq: "GroqCloud: Processed on server. Highest quality and speed.",
+                local: "Others: Processed locally. Depends on PC specs; accuracy and speed are lower than Groq."
             }
         }
     }
